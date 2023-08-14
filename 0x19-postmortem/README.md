@@ -82,5 +82,8 @@
   <li>Organize incident response training for engineering and operations teams.</li>
 </ul>
 
+<h2>Conclusion:</h2>
+<p>The incident highlighted the critical importance of proactive monitoring, rapid incident response, and collaborative cross-team efforts. By identifying the root cause, optimizing database performance, and implementing automated scaling mechanisms, we were able to restore the application's performance and minimize user impact. Moving forward, the lessons learned from this incident will guide us in fortifying our infrastructure, improving response strategies, and ensuring a more resilient user experience.</p>
+
 </body>
 </html>
