@@ -38,5 +38,3 @@ Read or watch:
 - Your Bash script must pass Shellcheck (version 0.3.7-5~ubuntu16.04.1 via apt-get) without any error
 - The first line of all your Bash scripts should be exactly `#!/usr/bin/env bash`
 - The second line of all your Bash scripts should be a comment explaining what the script is doing
-
-Use this to generate a beautiful HTML `readme.md` text.
