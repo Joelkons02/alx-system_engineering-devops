@@ -1,32 +1,15 @@
-server {
-	listen 80 default_server;
-	listen [::]:80 ipv6only=on default_server;
-	server_name localhost;
+#!/usr/bin/env bash
 
-	root /var/www/html;
+# Install Gunicorn and any other libraries required by your application
+sudo apt-get update
+sudo apt-get install -y python3-pip
+sudo pip3 install gunicorn
 
-	location /hbnb_static/ {
-		alias /data/web_static/current/;
-		autoindex off;
-	}
+# Clone your AirBnB_clone_v2 repository
+git clone https://github.com/username/AirBnB_clone_v2.git ~/AirBnB_clone_v2
 
-	index index.html index.htm index.nginx-debian.html;
-	rewrite ^/redirect_me https://github.com/besthor permanent;
+# Navigate to the repository directory
+cd ~/AirBnB_clone_v2
 
-	error_page 404 /404.html;
-
-	location = /404.html {
-		root /usr/share/nginx/html;
-		internal;
-	}
-
-	location /airbnb-onepage/ {
-		include proxy_params;
-                proxy_pass http://0.0.0.0:5000/airbnb-onepage/;
-        }
-
-	location / {
-		try_files $uri $uri/ =404;
-	}
-
-}
+# Bind Gunicorn instance to localhost on port 5000 with your application object as the entry point
+gunicorn --bind 0.0.0.0:5000 web_flask.0-hello_route:app
