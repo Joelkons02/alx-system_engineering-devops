@@ -9,6 +9,6 @@ server {
     }
 
     location / {
-        # You can add any other configuration directives here if needed
+        
     }
 }
